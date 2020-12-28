@@ -40,10 +40,10 @@ parfor i=1:100
     YTest = (mos(Test))';
     YTrain= (mos(Train))';
 
-    Mdl = fitrsvm(TrainFeatures, YTrain, 'KernelFunction', 'gaussian', 'KernelScale', 'auto', 'Standardize', true);
+    Mdl = fitrgp(TrainFeatures, YTrain, 'KernelFunction', 'rationalquadratic', 'Standardize', true);
     Pred= predict(Mdl,TestFeatures);
     
-    eval = metric_evaluation(Pred, YTest);
+    eval = metric_evaluation(Pred, YTest');
     PLCC(i) = eval(1);
     SROCC(i)= eval(2);
     KROCC(i)= eval(3);
