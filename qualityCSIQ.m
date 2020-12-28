@@ -88,11 +88,7 @@ parfor i=1:100
     YTest = (dmos(Test))';
     YTrain= (dmos(Train))';
 
-    Mdl = fitrensemble(TrainFeatures, YTrain, 'OptimizeHyperparameters','auto');
-    %Mdl = fitrtree(TrainFeatures, YTrain, 'OptimizeHyperparameters','auto');
-    %Mdl = fitrsvm(TrainFeatures, YTrain, 'KernelFunction', 'linear', 'Standardize', true);
-    %Mdl = fitrgp(TrainFeatures, YTrain, 'KernelFunction', 'rationalquadratic', 'Standardize', true);
-    %Mdl = fitrsvm(TrainFeatures, YTrain, 'KernelFunction', 'gaussian', 'KernelScale', 'auto', 'Standardize', true);
+    Mdl = fitrgp(TrainFeatures, YTrain, 'KernelFunction', 'rationalquadratic', 'Standardize', true);
     Pred= predict(Mdl,TestFeatures);
     
     eval = metric_evaluation(Pred, YTest');
