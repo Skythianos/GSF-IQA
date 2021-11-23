@@ -6,12 +6,12 @@
 If you use this code, please cite the following paper:
 ```
 @article{varga2021no,
-  title={No-Reference Image Quality Assessment with Global Statistical Features},
+  title={No-Reference Video Quality Assessment Based on Benford’s Law and Perceptual Features},
   author={Varga, Domonkos},
-  journal={Journal of Imaging},
-  volume={7},
-  number={2},
-  pages={29},
+  journal={Electronics},
+  volume={10},
+  number={22},
+  pages={2768},
   year={2021},
   publisher={Multidisciplinary Digital Publishing Institute}
 }
