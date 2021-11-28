@@ -9,6 +9,6 @@ function [CF] = getColorfulness(imgRGB)
     rg = R-G;
     yb = 0.5*(R+G)-B;
     
-    CF = sqrt( var(rg(:)) + var(yb(:)) ) + 0.3*sqrt( mean(rg(:))*mean(rg(:)) + mean(yb(:))*mean(yb(:)) );
+    CF = sqrt( var(rg(:))*var(rg(:)) + var(yb(:))*var(yb(:)) ) + 0.3*sqrt( mean(rg(:))*mean(rg(:)) + mean(yb(:))*mean(yb(:)) );
 
 end
